@@ -1,8 +1,8 @@
 from distutils.core import setup
 setup(
-  name = 'PlayfairCipherLib',         # How you named your package folder (MyLib)
-  packages = ['PlayfairCipherLib'],   # Chose the same as "name"
-  version = '0.1',      # Start with a small number and increase it with every change you make
+  name = 'PlayfairCipher',         # How you named your package folder (MyLib)
+  packages = ['PlayfairCipher'],   # Chose the same as "name"
+  version = '0.1.1',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Playfair cipher package',   # Give a short description about your library
   author = 'Justyna Skalska',                   # Type in your name

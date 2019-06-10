@@ -1,1 +1,1 @@
-# PlayfairCipherLib Test
+# PlayfairCipher Test
