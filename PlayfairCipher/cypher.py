@@ -5,16 +5,17 @@ from itertools import product
 from re import findall
 
 class Cypher:
-    def uniq(seq):
+    
+    def uniq(self, seq):
         seen = {}
         return [seen.setdefault(x, x) for x in seq if x not in seen]
     
-    def partition(seq, n):
+    def partition(self, seq, n):
         return [seq[i : i + n] for i in xrange(0, len(seq), n)]
     
     
     """Instantiate a specific encoder/decoder."""
-    def playfair(key, from_ = 'J', to = None):
+    def playfair(self, key, from_ = 'J', to = None):
         if to is None:
             to = 'I' if from_ == 'J' else ''
     
@@ -22,7 +23,7 @@ class Cypher:
             return filter(str.isupper, s.upper()).replace(from_, to)
     
         # Build 5x5 matrix.
-        m = partition(uniq(canonicalize(key + ascii_uppercase)), 5)
+        m = self.partition(self.uniq(canonicalize(key + ascii_uppercase)), 5)
     
         # Pregenerate all forward translations.
         enc = {}
@@ -52,14 +53,15 @@ class Cypher:
             return " ".join(enc[a + (b if b else 'X')] for a, b in lst)
     
         def sub_dec(encoded):
-            return " ".join(dec[p] for p in partition(canonicalize(encoded), 2))
+            return " ".join(dec[p] for p in self.partition(canonicalize(encoded), 2))
     
         return sub_enc, sub_dec
     
 
-    def doCypher(orig):
-        (encode, decode) = playfair("Playfair example")
+    def doCypher(self, orig):
+        (encode, decode) = self.playfair("Playfair example")
         print "Original:", orig
         enc = encode(orig)
         print "Encoded:", enc
         print "Decoded:", decode(enc)
+        
