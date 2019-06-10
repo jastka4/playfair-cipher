@@ -8,7 +8,7 @@ setup(
   author = 'Justyna Skalska',                   # Type in your name
   author_email = 'jastka4@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/jastka4/playfair-cipher',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/jastka4/playfair-cipher/archive/v_01.tar.gz',    # I'll explain this later on
+  download_url = 'https://github.com/jastka4/playfair-cipher/archive/v_02.tar.gz',    # I'll explain this later on
   keywords = ['playfair', 'cipher', 'pwr'],   # Keywords that define your package best
   classifiers=[
     'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
