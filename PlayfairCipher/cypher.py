@@ -60,8 +60,8 @@ class Cypher:
 
     def doCypher(self, orig):
         (encode, decode) = self.playfair("Playfair example")
-        print "Original:", orig
+        print "Original (updated):", orig
         enc = encode(orig)
-        print "Encoded:", enc
-        print "Decoded:", decode(enc)
+        print "Encoded (updated):", enc
+        print "Decoded (updated):", decode(enc)
         
